@@ -52,5 +52,5 @@ ASTC 615 Yonsei Universitiy (첨단관 615)
 -**Zooming using framelet**  
 (Raymond Chan / The Chinese University of Hong Kong)
 
-![Poster](https://mediviewsoft.github.io/assets/data/2017-03-10/poster3.pdf)
+![Poster](https://mediviewsoft.github.io/assets/data/2017-03-10/poster3.jpg)
 [Poster Download](https://mediviewsoft.github.io/assets/data/2017-03-10/poster3.pdf)
