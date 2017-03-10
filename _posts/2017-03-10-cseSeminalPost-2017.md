@@ -7,4 +7,4 @@ author-email: bukweonkim@naver.com
 description: 2017 CSE Special Seminar Poster
 ---
 
-![Alt text](http://MEDIVIEWSOFT.github.io/assets/data/2017-03-10/poster3.jpg)
+![Alt text](../assets/data/2017-03-10/poster3.jpg)
