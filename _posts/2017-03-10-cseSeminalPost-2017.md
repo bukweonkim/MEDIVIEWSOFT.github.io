@@ -29,15 +29,21 @@ ASTC 615 Yonsei Universitiy (첨단관 615)
 -**한반도 지진의 특성과 당면 과제**  
 (홍태경 교수 / 연세대 지구시스템과학과)
 
+* * *
+
 >## 3/31(Friday)
 * 11:00-11:50   
 -**초음파 영상진단기의 기술 추이**  
 (김철안 상무 / Samsung Medison)
 
+* * *
+
 >## 4/7(Friday)
 * 11:00-11:50   
 -**3d Cephalometry & Deep Learning**  
 (이상휘 교수 / 연세대 치과대학)
+
+* * *
 
 >## 4/12(Wednesday)
 * 14:00-14:10   
@@ -46,6 +52,9 @@ ASTC 615 Yonsei Universitiy (첨단관 615)
 * 14:20-15:20   
 -**Impedance imaging: from bench to bedside**  
 (우응제 교수 / 경희대학교 의공학교실)
+
+
+* * *
 
 >## 4/14(Friday)
 * 11:00-12:00   
