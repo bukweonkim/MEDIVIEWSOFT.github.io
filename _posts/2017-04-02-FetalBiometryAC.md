@@ -1,10 +1,10 @@
 ---
 layout: post
-title: 2017 CSE MEDIVIEWSOFT Special Seminar
+title: Importance of CNN's structure(Automatic Fetal Biometry Estimation)
 date: 2017-04-02 23:00:00
 author: 김부권
 author-email: bukweonkim@naver.com
-description: Importance of CNN's structure 
+description: Importance of CNN's structure with my automatic fetal biometry measurement research as example.
 ---
 # Importance of CNN's structure
 ## Introduction
@@ -20,7 +20,7 @@ description: Importance of CNN's structure
 
 여기서 복부둘레란(AC) 두 갈비뼈가 보이고, 태아의 위가 보이며, 제대정맥이 태아의 위(stomach)를 향해서으로 볼록하게 굽어있으며, 제대정맥이 피부까지 이어지지 않은 상태 기준으로 측정한 둘레를 이야기한다.
 
-![AC](https://mediviewsoft.github.io/assets/data/2017-04-02/AC.jpg)
+![AC](https://mediviewsoft.github.io/assets/data/2017-04-02/AC.JPG)
 
 * * *
 
@@ -29,7 +29,7 @@ description: Importance of CNN's structure
 ### Overall
 일단 먼저 우리의 알고리즘 구조부터 설명해보도록 하겠다.
 
-![Idea](https://mediviewsoft.github.io/assets/data/2017-04-02/idea.jpg)
+![Idea](https://mediviewsoft.github.io/assets/data/2017-04-02/idea.JPG)
 
 일단 우리는 특정한 '검은 점' 하나를 기준으로 그 주변 국지적 패턴을 파악하는 normal-view 크기의 이미지와, 좀 더 넓은 범위를 확인하는 normal-view 크기의 이미지, 그리고 각각의 점에서의 초음파 진행방향 input data로서 CNN에 넣어 그 '검은 점'이 양수인지(Amniotic Fluid(AF)), 태아의 위인지(Stomach Bubble(SB)), 제대 정맥인지(Umbrical Vein(UV)) 아니면 Shadowing Artifacts인지(SA)를 구별하는 구조를 하고 있다.
 
@@ -46,19 +46,19 @@ description: Importance of CNN's structure
 
 당장 위의 그림만 봐도 녹색끼리와 파란색 끼리를 딱 저만큼만 사람에게 보여줄 경우 사람조차 저것이 녹색의 경우 AF인지 SB인지 구분이 힘들고, 파란색의 경우 AF인지 SA인지 구분이 힘들다. 그러므로 normal view size의 인풋만 가지고는 애초에 구분이 힘들다는 사실을 알 수 있었다. 그래서 우리는 이 구분을 좀 더 엄밀하게 할 수 있도록, 실제 초음파 영상의 특징을 생각해 보았고, 다음과 같은 input을 추가하게 되었다.
 
-![direction](https://mediviewsoft.github.io/assets/data/2017-04-02/direction.jpg)
+![direction](https://mediviewsoft.github.io/assets/data/2017-04-02/direction.JPG)
 
 첫번째로 우리가 어떻게 전체 이미지에서 SA를 구분하는지 고찰해보면, 초음파 영상은 초음파의 물리적 성질에 의해서 SA는 반드시 초음파 진행방향으로 뼈 등의 단단한 물체 뒤에 생기게 된다. 그렇기에 각 점에서의 초음파 진행방향을 확인함으로서 구분을 할수 있다. 
  
-![zoom](https://mediviewsoft.github.io/assets/data/2017-04-02/zoom.jpg)
+![zoom](https://mediviewsoft.github.io/assets/data/2017-04-02/zoom.JPG)
 
 두번째로, 가장 어떤의미로 당연한 이야기지만, 위의 이미지처럼 좀 더 넓은 범위를 보게되면 구분이 가능하다. 하지만 넓은 영역을 보려고 하면 input data의 크기가 커지게 되는데, 이를 보정하기 위해 넓은 영역은 좀 더 낮은 해상도로 보았다. 
 
-![structure](https://mediviewsoft.github.io/assets/data/2017-04-02/structure.jpg)
+![structure](https://mediviewsoft.github.io/assets/data/2017-04-02/structure.JPG)
 
 두 아이디어를 결합하여 새로 CNN을 짠 결과, 위와같은 구조가 되었다. 실제로 위의 구조를 학습시켜보니 
 
-![result](https://mediviewsoft.github.io/assets/data/2017-04-02/result.jpg)
+![result](https://mediviewsoft.github.io/assets/data/2017-04-02/result.JPG)
 
 위와같은 결과를 얻을 수 있었다. 처음 시도한 normal view만을 이용한 CNN으로는 현재 주어진 의료영상 data만으로는 불가능했을 것이다.
 
