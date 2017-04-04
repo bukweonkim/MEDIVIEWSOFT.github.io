@@ -29,8 +29,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/assets/images/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
+
 
   
 </head>
@@ -40,6 +39,10 @@
 
   {% if page.profile %}
       {% include profile.html %}
+  {% endif %}
+  
+  {% if page.use_math %}
+      {% include mathjax_support %}
   {% endif %}
 
   <section id="wrapper" class="{% if page.profile %}home{% endif %}">
